@@ -18,27 +18,57 @@
 
 <body>
     <header>
-        <img class="burger" src="src/burger.svg" alt="">
-        <a href="/">
-            <img class="logo" src="src/images/logo.png" alt="/">
-        </a>
-        <ul>
-            <li class="sub">
-                <a href="/">Букеты</a>
-            </li>
-            <li class="sub">
-                <a href="/">Отзывы</a>
-            </li>
-            <li class="sub">
-                <a href="/">Доставка и оплата</a>
-            </li>
-            <li class="sub">
-                <a href="/">Контакты</a>
-            </li>
-        </ul>
-        <a class="contact" href="/">
-            <img src="src/phone.svg" alt="phone"> <span>+7 (960) 210-22-33</span>
-        </a>
+        <div class="fr-nav">
+            <div class="burger-div">
+                <img class="burger" src="src/burger.svg" alt="burger icon">
+            </div>
+            <a href="/">
+                <img class="logo-main" src="src/images/logo.png" alt="logo image">
+            </a>
+            <a class="fr-contact" href="/">
+                <img src="src/phone.svg" alt="phone"> <span>+7 (960) 210-22-33</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="fr-logo">
+                    <a href="/">
+                        <img class="logo" src="src/images/logo.png" alt="/">
+                    </a>
+                </li>
+                <li class="sub">
+                    <a href="/">Букеты</a>
+                </li>
+                <li class="sub">
+                    <a href="/">Отзывы</a>
+                </li>
+                <li class="sub">
+                    <a href="/">Доставка и оплата</a>
+                </li>
+                <li class="sub">
+                    <a href="/">Контакты</a>
+                </li>
+                <li class="fr-social-medias">
+                    <a href="/">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="/">
+                        <ion-icon name="logo-pinterest"></ion-icon>
+                    </a>
+                    <a href="/">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                    <a href="/">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <a class="contact" href="/">
+                <img src="src/phone.svg" alt="phone"> <span>+7 (960) 210-22-33</span>
+            </a>
+        </div>
     </header>
 
     <main>
@@ -105,12 +135,10 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

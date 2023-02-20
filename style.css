@@ -7,7 +7,9 @@
 :root {
     --button-color: #69766D;
     --text-button-color: #F6F6F5;
+    --second-text-color: #FFF;
     --icon-color: #B8926B;
+    --header-color: #D8BFA9;
     --title-color: #161616;
     --vector-color: #D8BFA9;
 }
@@ -32,11 +34,14 @@ header {
     justify-content: space-between;
 }
 
-header .burger {
+header .burger, 
+.fr-contact,
+.fr-logo,
+.fr-social-medias {
     display: none;
 }
 
-.logo {
+header .logo-main, .logo {
     width: 90px;
 }
 
@@ -52,7 +57,7 @@ header ul li::before {
     width: 0;
     position: absolute;
     transition: all .5s;
-    border: 1px solid var(--vector-color); 
+    border: 1px solid var(--vector-color);
 }
 
 header ul li:hover {
@@ -211,8 +216,8 @@ footer {
 
 .card {
     z-index: 2;
-    width: 175px;
-    height: 200px;
+    width: 160px;
+    height: 220px;
     margin-bottom: 20px;
     border: none;
 }
@@ -224,11 +229,11 @@ footer {
 }
 
 .card h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
-    margin-top: 53px;
+    margin-top: 32px;
 }
 
 .card p {
@@ -255,27 +260,83 @@ footer {
 }
 
 @media(max-width:768px) {
-    .sub {
+    header {
+        width: 100%;
+        display: block;
+    }
+
+    header .fr-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto 20px;
+        /* padding: 0 40px; */
+    }
+
+    header div .contact {
         display: none;
     }
 
-    header .burger {
-        display: block;
-        cursor: pointer;
-        margin-right: 8rem;
+    header .fr-contact {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        opacity: 1;
     }
 
-    header {
+    header .burger, 
+    .fr-social-medias {
+        display: block;
+    }
+
+    header .fr-contact {
+        width: 100px;
+    }
+
+    header .burger {
+        cursor: pointer;
+    }
+
+    header nav {
+        width: 100%;
+        display: block;
+    }
+
+    header ul {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        border: 1px solid red;
+    }
+
+    header ul li::before {
+       display: none;
+    }
+
+    header ul li:hover {
+        transform: none;
+    }
+
+    header ul li a {
+        color: var(--second-text-color);
+    }
+
+    header ul li a:hover {
+        opacity: 1;
+    }
+
+    header ul li a ion-icon {
+        color: var(--text-button-color);
+        border: 1px solid var(--second-text-color);
     }
 
     main {
+        margin-top: 5rem;
         flex-direction: column;
         justify-content: center;
-        border: 3px solid red;
     }
 
     main container {
@@ -287,8 +348,20 @@ footer {
         display: none;
     }
 
-    footer .vect, .vect2 {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        width: 130px;
+        height: 250px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .vect, .vect2 {
         display: none;
     }
+    
 
 }
