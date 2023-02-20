@@ -23,6 +23,7 @@ body {
     max-width: 1130px;
     height: 100vh;
     margin: 0 auto;
+    position: relative;
     font-family: 'EB Garamond', serif;
 }
 
@@ -57,6 +58,7 @@ header ul li::before {
     width: 0;
     position: absolute;
     transition: all .5s;
+    opacity: 0;
     border: 1px solid var(--vector-color);
 }
 
@@ -65,6 +67,7 @@ header ul li:hover {
 }
 
 header ul li:hover::before {
+    opacity: 1;
     width: 30px;
 }
 
@@ -98,6 +101,7 @@ span {
 }
 
 main {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,6 +149,83 @@ container button {
 container button p {
     font-size: 20px;
 }
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.modal-box {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -75%);
+    z-index: 100;
+}
+
+.overlay, .modal-box {
+    display: none;
+}
+
+form {
+    width: 746px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--text-button-color);
+}
+
+form .modal-close {
+    display: flex;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+form div h1 {
+    text-align: center;
+    margin: 80px 0;
+}
+
+form label {
+    display: block;
+    font-size: 18px;
+    color: var(--title-color);
+}
+
+form .form-example {
+    margin-bottom: 32px;
+}
+
+form input {
+    width: 521px;
+    height: 40px;
+    border: none;
+}
+
+form input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    color: var(--text-button-color);
+    background-color: var(--button-color);
+}
+
+form p {
+    width: 521px;
+    color: var(--button-color);
+}
+
 
 section {
     display: flex;
@@ -293,8 +374,8 @@ footer {
         display: block;
     }
 
-    header .fr-contact {
-        width: 100px;
+    header .burger-div, .fr-contact {
+        width: 150px;
     }
 
     header .burger {
@@ -307,7 +388,7 @@ footer {
     }
 
     header ul {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
     }
@@ -329,6 +410,8 @@ footer {
     }
 
     header ul li a ion-icon {
+        margin: .5rem;
+        opacity: 1;
         color: var(--text-button-color);
         border: 1px solid var(--second-text-color);
     }

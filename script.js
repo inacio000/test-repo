@@ -1,22 +1,27 @@
-var menu = document.querySelector('.burger')
-var iconMenu = document.querySelector('header .burger')
-var firstNav = document.querySelector('.fr-nav')
-var secondLogo = document.querySelector('.logo-main')
-var menuOpen = document.querySelector('header nav ul')
-var contact = document.querySelector('header .fr-contact')
-var headerColor = document.querySelector('header')
-var burgerDiv = document.querySelector('header .burger-div')
+var menu = document.querySelector('.burger'),
+iconMenu = document.querySelector('header .burger'),
+firstNav = document.querySelector('.fr-nav'),
+secondLogo = document.querySelector('.logo-main'),
+menuOpen = document.querySelector('header nav ul'),
+contact = document.querySelector('header .fr-contact'),
+headerColor = document.querySelector('header'),
+burgerDiv = document.querySelector('header .burger-div')
+
+const button = document.querySelector('.zakaz button')
+const overlay = document.querySelector('.overlay')
+const closeModal = document.querySelector('.modal-close')
+const showModal = document.querySelector('.modal-box')
 
 menu.addEventListener('click', function() {
     if (iconMenu.getAttribute("src") == 'src/burger.svg') {
-        menu.style.float = 'right'
         iconMenu.setAttribute("src", 'src/close.svg')
+        menu.style.float = 'right'
         firstNav.style.flexDirection = 'row-reverse'
         menuOpen.style.display = 'flex'
         contact.style.opacity = '0'
         headerColor.style.backgroundColor = 'var(--header-color)'
         secondLogo.setAttribute("src", 'src/images/logo2.png')
-        burgerDiv.style.width = '75px'
+        burgerDiv.style.width = '110px'
         document.body.style.padding = '0'
     } else {
         iconMenu.setAttribute("src", 'src/burger.svg')
@@ -25,9 +30,23 @@ menu.addEventListener('click', function() {
         secondLogo.setAttribute("src", 'src/images/logo.png')
         menuOpen.style.display = 'none'
         contact.style.opacity = '1'
-        burgerDiv.style.width = '100px'
         headerColor.style.backgroundColor = '#fff'
     }
 
     menu.classList.toggle('active')
+})
+
+button.addEventListener('click', function() {
+    overlay.style.display = 'block'
+    showModal.style.display = 'block'
+})
+
+overlay.addEventListener('click', function() {
+    overlay.style.display = 'none'
+    showModal.style.display = 'none'
+})
+
+closeModal.addEventListener('click', function() {
+    overlay.style.display = 'none'
+    showModal.style.display = 'none'
 })
