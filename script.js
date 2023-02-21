@@ -1,18 +1,18 @@
 var menu = document.querySelector('.burger'),
-iconMenu = document.querySelector('header .burger'),
-firstNav = document.querySelector('.fr-nav'),
-secondLogo = document.querySelector('.logo-main'),
-menuOpen = document.querySelector('header nav ul'),
-contact = document.querySelector('header .fr-contact'),
-headerColor = document.querySelector('header'),
-burgerDiv = document.querySelector('header .burger-div')
+    iconMenu = document.querySelector('header .burger'),
+    firstNav = document.querySelector('.fr-nav'),
+    secondLogo = document.querySelector('.logo-main'),
+    menuOpen = document.querySelector('header nav ul'),
+    contact = document.querySelector('header .fr-contact'),
+    headerColor = document.querySelector('header'),
+    burgerDiv = document.querySelector('header .burger-div')
 
-const button = document.querySelector('.zakaz button')
-const overlay = document.querySelector('.overlay')
-const closeModal = document.querySelector('.modal-close')
-const showModal = document.querySelector('.modal-box')
+const button = document.querySelector('.zakaz button'),
+    overlay = document.querySelector('.overlay'),
+    closeModal = document.querySelector('.modal-close'),
+    showModal = document.querySelector('.modal-box')
 
-menu.addEventListener('click', function() {
+menu.addEventListener('click', function () {
     if (iconMenu.getAttribute("src") == 'src/burger.svg') {
         iconMenu.setAttribute("src", 'src/close.svg')
         menu.style.float = 'right'
@@ -36,17 +36,17 @@ menu.addEventListener('click', function() {
     menu.classList.toggle('active')
 })
 
-button.addEventListener('click', function() {
+button.addEventListener('click', function () {
     overlay.style.display = 'block'
     showModal.style.display = 'block'
 })
 
-overlay.addEventListener('click', function() {
+overlay.addEventListener('click', function () {
     overlay.style.display = 'none'
     showModal.style.display = 'none'
 })
 
-closeModal.addEventListener('click', function() {
+closeModal.addEventListener('click', function () {
     overlay.style.display = 'none'
     showModal.style.display = 'none'
 })
