@@ -107,6 +107,7 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    margin: 4rem 0;
 }
 
 container {
@@ -118,9 +119,16 @@ container {
     flex-wrap: wrap;
 }
 
+.stars-icon {
+    width: 200px;
+    position: absolute;
+    transform: translate(-20%, -40%);
+}
+
 container h1 {
+    display: block;
     position: relative;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 400;
 }
 
@@ -128,15 +136,6 @@ container p {
     font-size: 20px;
     opacity: .7;
 }
-
-/* container h1::after {
-    content: url(./src/stars.svg);
-    position: absolute;
-    width: 50px;
-    z-index: -1;
-    top: 0;
-    left: 0;
-} */
 
 container button {
     width: 200px;
@@ -542,6 +541,10 @@ footer {
 
     header ul {
         gap: 25px;
+    }
+
+    .stars-icon {
+        display: none;
     }
 
     main {
