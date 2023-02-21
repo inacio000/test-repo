@@ -120,10 +120,17 @@ container {
 }
 
 .stars-icon {
+    width: 210px;
+    position: absolute;
+    transform: translate(-25%, -45%);
+}
+
+.stars-icon2 {
     width: 200px;
     position: absolute;
-    transform: translate(-20%, -40%);
+    transform: translate(-25%, 25%);
 }
+
 
 container h1 {
     display: block;
@@ -328,7 +335,7 @@ footer {
 }
 
 .card .vect {
-    width: 146px;
+    width: 140px;
     height: 33px;
     position: absolute;
     left: 83px;
@@ -337,7 +344,7 @@ footer {
 }
 
 .card .vect2 {
-    width: 146px;
+    width: 140px;
     height: 33px;
     position: absolute;
     left: 83px;
