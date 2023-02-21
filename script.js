@@ -23,6 +23,8 @@ menu.addEventListener('click', function () {
         secondLogo.setAttribute("src", 'src/images/logo2.png')
         burgerDiv.style.width = '110px'
         document.body.style.padding = '0'
+        overlay.style.display = 'block'
+        overlay.style.zIndex = '150'
     } else {
         iconMenu.setAttribute("src", 'src/burger.svg')
         firstNav.style.flexDirection = 'row'
@@ -31,6 +33,7 @@ menu.addEventListener('click', function () {
         menuOpen.style.display = 'none'
         contact.style.opacity = '1'
         headerColor.style.backgroundColor = '#fff'
+        overlay.style.display = 'none'
     }
 
     menu.classList.toggle('active')
@@ -38,6 +41,8 @@ menu.addEventListener('click', function () {
 
 button.addEventListener('click', function () {
     overlay.style.display = 'block'
+    overlay.style.position = 'fixed'
+    overlay.style.top = '0'
     showModal.style.display = 'block'
 })
 
