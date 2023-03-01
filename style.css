@@ -20,11 +20,12 @@ h1 {
 }
 
 body {
-    max-width: 1130px;
+    max-width: 1080px;
     height: 100vh;
     margin: 0 auto;
+    padding: 0 .5rem;
     position: relative;
-    font-family: 'EB Garamond', serif;
+    font-family: 'EB Garamond', sans-serif;
 }
 
 header {
@@ -40,6 +41,10 @@ header .burger,
 .fr-logo,
 .fr-social-medias {
     display: none;
+}
+
+header .fr-contact, .contact {
+    gap: .5rem;
 }
 
 header .logo-main,
@@ -111,18 +116,19 @@ main {
 }
 
 container {
-    width: 450px;
+    width: fit-content;
     height: 300px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+
 }
 
 .stars-icon {
-    width: 210px;
+    width: 260px;
     position: absolute;
-    transform: translate(-25%, -45%);
+    transform: translate(-25%, -35%);
 }
 
 .stars-icon2 {
@@ -135,12 +141,13 @@ container {
 container h1 {
     display: block;
     position: relative;
-    font-size: 38px;
+    font-size: 60px;
     font-weight: 400;
 }
 
 container p {
-    font-size: 20px;
+    max-width: 480px;
+    font-size: 24px;
     opacity: .7;
 }
 
@@ -171,7 +178,7 @@ container button p {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -75%);
+    transform: translate(-48%, -78%);
     z-index: 200;
     margin-bottom: 2rem;
 }
@@ -245,16 +252,16 @@ section {
 }
 
 section img {
-    width: 250px;
+    width: 280px;
 }
 
-.social-medias {
+.medias {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.social-medias ion-icon:hover {
+.medias ion-icon:hover {
     opacity: 1;
 }
 
@@ -353,6 +360,11 @@ footer {
 }
 
 @media(max-width:768px) {
+
+    body {
+        padding: 0 10px;
+    }
+
     header {
         position: fixed;
         top: 0;
@@ -367,8 +379,8 @@ footer {
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 auto 20px;
-        /* padding: 0 40px; */
+        margin: 0 auto;
+        float: right;
     }
 
     header div .contact {
@@ -376,11 +388,10 @@ footer {
     }
 
     header .fr-contact {
-        width: 80px;
+        width: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: fit-content;
         opacity: 1;
     }
 
@@ -400,13 +411,16 @@ footer {
 
     header nav {
         width: 100%;
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 
     header ul {
         display: none;
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        gap: 16px;
     }
 
     header ul li::before {
@@ -432,19 +446,44 @@ footer {
         border: 1px solid var(--second-text-color);
     }
 
+    .modal-box {
+        transform: translate(-48%, -69%);
+        z-index: 200;
+    }
+
     main {
-        margin-top: 250px;
+        margin: 170px auto 0;
         flex-direction: column;
         justify-content: center;
     }
 
     main container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+    }
+
+    main container h1 {
+        font-size: 35px;
+    }
+
+    main container p {
+        width: 330px;
+        font-size: 18px;
+    }
+
+    main container button {
+        font-size: 20px;
     }
 
     main section {
         display: none;
+    }
+
+    main .stars-icon {
+        width: 210px;
+        transform: translate(-60%, -95%);
     }
 
     .card {
@@ -458,11 +497,6 @@ footer {
         text-align: center;
     }
 
-    .vect,
-    .vect2 {
-        display: none;
-    }
-
     form {
         width: 606px;
         height: 512px;
@@ -472,6 +506,10 @@ footer {
         align-items: center;
         border: none;
         background-color: var(--text-button-color);
+    }
+
+    .card-list {
+        gap: 60px;
     }
 
 }
@@ -505,6 +543,11 @@ footer {
     form label {
         font-size: 22px;
     }
+
+    .vect,
+    .vect2 {
+        display: none;
+    }
 }
 
 @media(max-width: 420px) {
@@ -524,13 +567,36 @@ footer {
         justify-content: flex-end;
     }
 
+    .logo-main {
+        align-items: center;
+        margin-left: .6rem;
+    }
+
+    main {
+        margin-top: 155px;
+    }
+
     main container h1 {
         font-size: 32px;
+    }
+
+    .stars-icon {
+        display: none;
     }
 
     container button {
         width: 250px;
         font-size: 22px;
+    }
+
+    form input {
+        width: 300px;
+        height: 35px;
+    }
+
+    form p {
+        width: 300px;
+        font-size: 14px;
     }
 
 }
@@ -551,12 +617,16 @@ footer {
         gap: 25px;
     }
 
-    .stars-icon {
-        display: none;
+    main {
+        margin-top: 212px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
-    main {
-        margin-top: 180px;
+    main container p {
+        width: fit-content;
+        font-size: 18px;
     }
 
     container {
@@ -592,6 +662,11 @@ footer {
     form p {
         width: 300px;
         font-size: 14px;
+    }
+
+    form .form-example input[type="submit"] {
+        width: 227px;
+        height: 59px;
     }
 
     .card-list {

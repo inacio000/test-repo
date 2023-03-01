@@ -2,6 +2,7 @@ var menu = document.querySelector('.burger'),
     iconMenu = document.querySelector('header .burger'),
     firstNav = document.querySelector('.fr-nav'),
     secondLogo = document.querySelector('.logo-main'),
+    othertLogo = document.querySelector('.fr-logo'),
     menuOpen = document.querySelector('header nav ul'),
     contact = document.querySelector('header .fr-contact'),
     headerColor = document.querySelector('header'),
@@ -24,7 +25,11 @@ menu.addEventListener('click', function () {
         burgerDiv.style.width = '110px'
         document.body.style.padding = '0'
         overlay.style.display = 'block'
-        overlay.style.zIndex = '150'
+        overlay.style.zIndex = '9'
+        secondLogo.style.display = 'none'
+        othertLogo.style.display = 'block'
+        contact.style.width = ''
+
     } else {
         iconMenu.setAttribute("src", 'src/burger.svg')
         firstNav.style.flexDirection = 'row'
@@ -34,6 +39,9 @@ menu.addEventListener('click', function () {
         contact.style.opacity = '1'
         headerColor.style.backgroundColor = '#fff'
         overlay.style.display = 'none'
+        secondLogo.style.marginLeft = '.6rem'
+        secondLogo.style.display = 'block'
+        othertLogo.style.display = 'none'
     }
 
     menu.classList.toggle('active')
